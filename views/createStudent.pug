@@ -1,0 +1,11 @@
+extends layout
+block content
+    .container
+        form(action = "/student", method = "POST")
+            .form-group
+                label(for='studentName') Student Name
+                input#studentName.form-control(type='text' name="studentName")
+            .form-group
+                label(for='emailAddress') e-Mail Address
+                input#emailAddress.form-control(type='email' name="emailValue")
+            button.btn.btn-primary(type='submit') Submit

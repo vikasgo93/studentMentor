@@ -1,0 +1,17 @@
+extends layout
+block content
+        .container
+            h2 Re-assign a Student to a Different Mentor
+            form(action='/changed' method='POST')
+                .form-group
+                    label(for='student') Choose a Student
+                    select#student(name='student').form-control
+                        each val in data['students']
+                            option= val.name
+                    br
+                    label(for='mentor') Choose a Mentor:
+                    select#mentor(name='mentor').form-control
+                        each val in data['mentors']
+                            option= val.name
+                    br
+                    button.btn.btn-primary(type='submit') Submit

@@ -1,0 +1,11 @@
+extends layout
+block content
+    .container
+        form(action = "/mentor", method = "POST")
+            .form-group
+                label(for='mentorName') Name
+                input#mentorName.form-control(type='text' name='mentorName')
+            .form-group
+                label(for='subject') Subject
+                input#subject.form-control(type='text' name='subjectName')
+            button.btn.btn-primary(type='submit') Submit

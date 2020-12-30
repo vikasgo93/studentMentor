@@ -1,0 +1,11 @@
+extends layout
+block content
+        .container
+            h2 Re-assign a Student to a Different Mentor
+            form(action='/viewList' method='POST')
+                .form-group
+                    label(for='mentor') Choose a Mentor:
+                    select#mentor(name='mentor').form-control
+                        each val in data
+                            option= val.name
+                button.btn.btn-primary(type='submit') Submit
